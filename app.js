@@ -2,14 +2,12 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-function reqInfo(req, res, next) {
+app.use((req, res, next) => {
   let date = new Date()
   let formatedDate = `${date.getFullYear()}-${('0' + (Number(date.getMonth()) + 1)).substr(-2)}-${('0' + date.getDate()).substr(-2)} ${('0' + date.getHours()).substr(-2)}:${('0' + date.getMinutes()).substr(-2)}:${('0' + date.getSeconds()).substr(-2)}`
   console.log(`${formatedDate} | ${req.method} from ${req.url}`)
   next()
-}
-
-app.use(reqInfo)
+})
 
 // 列出全部 Todo
 app.get('/', (req, res) => {
