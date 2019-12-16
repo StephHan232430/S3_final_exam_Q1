@@ -4,7 +4,7 @@
 
 ## 功能列表
 
-- 收到 request 時，將 request 的 time-stamp、HTTP method、URL 以『 YYYY-MM-DD hh:mm:ss 』格式呈現在 terminal 中
+- 收到 request 時，將 request 的 time-stamp、HTTP method、URL 以『 **YYYY-MM-DD hh:mm:ss** | **METHOD** from **URL** 』格式呈現在 terminal 中
 
 ## 環境建置
 
